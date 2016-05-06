@@ -86,9 +86,9 @@ class pilipili extends Component {
                 hardCodec:false,
               }}
               style={{
-              height:200,
-              width:200,
-            }}
+                height:200,
+                width:200,
+              }}
               />
 
           <TouchableHighlight onPress={this._onPressButton.bind(this)}>
