@@ -27,12 +27,17 @@ import Pili, {
 //    />
 
 //<Player
-//    src={"rtmp://pili-live-rtmp.pilitest.qiniucdn.com/pilitest/buhe"}
+//    source={{
+//                uri:"rtmp://live.hkstv.hk.lxdns.com/live/hks",
+//                //controller: true,
+//                timeout: 10 * 1000,
+//                live:true,
+//                hardCodec:false,
+//              }}
 //    style={{
-//              height:200,
-//              width:200,
-//              //backgroundColor:'red'
-//            }}
+//                height:200,
+//                width:200,
+//              }}
 //    />
 
 //var Demo = require('react-native-pili');
@@ -69,7 +74,8 @@ class pilipili extends Component {
     this.state = {
       stream: S1,
       zoom: 1,
-      focus: false
+      focus: false,
+      started: false
     }
   }
 
@@ -77,18 +83,27 @@ class pilipili extends Component {
 
     return (
         <View style={styles.container}>
-          <Player
-              source={{
-                uri:"rtmp://live.hkstv.hk.lxdns.com/live/hks",
-                //controller: true,
-                timeout: 10 * 1000,
-                live:true,
-                hardCodec:false,
-              }}
+          <Streaming
+              stream={this.state.stream}
               style={{
-                height:200,
-                width:200,
+                        height:200,
+                        width:200,
+                      }}
+              zoom={this.state.zoom}
+              focus={this.state.focus}
+              profile={{
+                video:{
+                  fps:30,
+                  bps:1000 * 1024,
+                  maxFrameInterval:48
+                },
+                audio:{
+                  rate:44100,
+                  bitrate:96 * 1024
+                },
               }}
+              started={this.state.started}
+              onReady={this.onReady.bind(this)}
               />
 
           <TouchableHighlight onPress={this._onPressButton.bind(this)}>
@@ -98,8 +113,24 @@ class pilipili extends Component {
           <TouchableHighlight onPress={this.zoom.bind(this)}>
             <Text style={{height:100,width:100}}>Zoom</Text>
           </TouchableHighlight>
+
+          <TouchableHighlight onPress={this.start.bind(this)}>
+            <Text style={{height:100,width:100}}>{this.state.started ? "Stop" : "Start"}</Text>
+          </TouchableHighlight>
+
+          <Text>{this.state.text}</Text>
         </View>
     );
+  }
+
+  onReady(event){
+    this.setState({text:'ready...'});
+  }
+
+  start(){
+    this.setState({
+      started:!this.state.started
+    });
   }
 
   zoom() {
