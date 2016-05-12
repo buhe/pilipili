@@ -21,7 +21,7 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
-		7836319F1CE1ECEE00628658 /* libRCTPili.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7836319E1CE1ECE900628658 /* libRCTPili.a */; };
+		781A25891CE464AB00C9FCF5 /* libRCTPili.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 781A25831CE4608E00C9FCF5 /* libRCTPili.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 /* End PBXBuildFile section */
 
@@ -89,11 +89,11 @@
 			remoteGlobalIDString = 83CBBA2E1A601D0E00E9B192;
 			remoteInfo = React;
 		};
-		7836319D1CE1ECE900628658 /* PBXContainerItemProxy */ = {
+		781A25821CE4608E00C9FCF5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 783631991CE1ECE900628658 /* RCTPili.xcodeproj */;
+			containerPortal = 781A25791CE4608E00C9FCF5 /* RCTPili.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 783631711CE1E87800628658;
+			remoteGlobalIDString = 783631EB1CE3408300628658;
 			remoteInfo = RCTPili;
 		};
 		78C398B81ACF4ADC00677621 /* PBXContainerItemProxy */ = {
@@ -132,7 +132,7 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = pilipili/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = pilipili/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
-		783631991CE1ECE900628658 /* RCTPili.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTPili.xcodeproj; path = "../node_modules/react-native-pili/ios/RCTPili/RCTPili.xcodeproj"; sourceTree = "<group>"; };
+		781A25791CE4608E00C9FCF5 /* RCTPili.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTPili.xcodeproj; path = "../node_modules/react-native-pili/ios/RCTPili/RCTPili.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -149,7 +149,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7836319F1CE1ECEE00628658 /* libRCTPili.a in Frameworks */,
+				781A25891CE464AB00C9FCF5 /* libRCTPili.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
 				00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */,
@@ -268,10 +268,10 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		7836319A1CE1ECE900628658 /* Products */ = {
+		781A257A1CE4608E00C9FCF5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7836319E1CE1ECE900628658 /* libRCTPili.a */,
+				781A25831CE4608E00C9FCF5 /* libRCTPili.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -287,7 +287,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				783631991CE1ECE900628658 /* RCTPili.xcodeproj */,
+				781A25791CE4608E00C9FCF5 /* RCTPili.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
 				00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */,
 				00C302B51ABCB90400DB3ED1 /* RCTGeolocation.xcodeproj */,
@@ -384,6 +384,9 @@
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
+					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = N22PJBS26Y;
+					};
 				};
 			};
 			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "pilipili" */;
@@ -419,8 +422,8 @@
 					ProjectRef = 00C302D31ABCB9D200DB3ED1 /* RCTNetwork.xcodeproj */;
 				},
 				{
-					ProductGroup = 7836319A1CE1ECE900628658 /* Products */;
-					ProjectRef = 783631991CE1ECE900628658 /* RCTPili.xcodeproj */;
+					ProductGroup = 781A257A1CE4608E00C9FCF5 /* Products */;
+					ProjectRef = 781A25791CE4608E00C9FCF5 /* RCTPili.xcodeproj */;
 				},
 				{
 					ProductGroup = 139105B71AF99BAD00B5F7CC /* Products */;
@@ -508,11 +511,11 @@
 			remoteRef = 146834031AC3E56700842450 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		7836319E1CE1ECE900628658 /* libRCTPili.a */ = {
+		781A25831CE4608E00C9FCF5 /* libRCTPili.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libRCTPili.a;
-			remoteRef = 7836319D1CE1ECE900628658 /* PBXContainerItemProxy */;
+			remoteRef = 781A25821CE4608E00C9FCF5 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		78C398B91ACF4ADC00677621 /* libRCTLinking.a */ = {
@@ -649,6 +652,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEAD_CODE_STRIPPING = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -659,6 +664,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = pilipili;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -666,6 +672,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -675,6 +683,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = pilipili;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

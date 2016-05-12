@@ -12,20 +12,28 @@ import React, {
   View
 } from 'react-native';
 
+import Pili, {
+    Streaming,
+    Player
+} from 'react-native-pili';
+
 class pilipili extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
+        <Player
+              source={{
+                          uri:"rtmp://live.hkstv.hk.lxdns.com/live/hks",
+                          //controller: true,
+                          //timeout: 10 * 1000,
+                          //live:true,
+                          //hardCodec:false,
+                        }}
+              style={{
+                          height:200,
+                          width:200,
+                        }}
+              />
       </View>
     );
   }
@@ -33,6 +41,8 @@ class pilipili extends Component {
 
 const styles = StyleSheet.create({
   container: {
+    width:200,
+    height:200,
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
