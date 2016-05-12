@@ -30,8 +30,8 @@ class pilipili extends Component {
                           //hardCodec:false,
                         }}
               style={{
-                          height:200,
-                          width:200,
+                          height:300,
+                          width:1000,
                         }}
               />
       </View>
@@ -41,8 +41,6 @@ class pilipili extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    width:200,
-    height:200,
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',

@@ -21,7 +21,9 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
-		781A25891CE464AB00C9FCF5 /* libRCTPili.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 781A25831CE4608E00C9FCF5 /* libRCTPili.a */; };
+		7864EB641CE488C50020FFF1 /* libRCTPili.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 781A25831CE4608E00C9FCF5 /* libRCTPili.a */; };
+		7864EB6C1CE489EC0020FFF1 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7864EB6B1CE489EC0020FFF1 /* libz.tbd */; };
+		7864EB6E1CE489F70020FFF1 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7864EB6D1CE489F70020FFF1 /* libc++.tbd */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 /* End PBXBuildFile section */
 
@@ -133,6 +135,8 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = pilipili/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
 		781A25791CE4608E00C9FCF5 /* RCTPili.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTPili.xcodeproj; path = "../node_modules/react-native-pili/ios/RCTPili/RCTPili.xcodeproj"; sourceTree = "<group>"; };
+		7864EB6B1CE489EC0020FFF1 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		7864EB6D1CE489F70020FFF1 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -149,7 +153,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				781A25891CE464AB00C9FCF5 /* libRCTPili.a in Frameworks */,
+				7864EB6E1CE489F70020FFF1 /* libc++.tbd in Frameworks */,
+				7864EB6C1CE489EC0020FFF1 /* libz.tbd in Frameworks */,
+				7864EB641CE488C50020FFF1 /* libRCTPili.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
 				00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */,
@@ -264,6 +270,8 @@
 		70665083532B0A19F13F0720 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7864EB6D1CE489F70020FFF1 /* libc++.tbd */,
+				7864EB6B1CE489EC0020FFF1 /* libz.tbd */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
