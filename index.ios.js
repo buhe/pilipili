@@ -5,12 +5,13 @@
  */
 
 import React, {
-  AppRegistry,
-  Component,
-  StyleSheet,
-  Text,
-  View,
-  Dimensions
+    AppRegistry,
+    Component,
+    StyleSheet,
+    Text,
+    View,
+    Dimensions,
+    TouchableHighlight
 } from 'react-native';
 
 var {height, width} = Dimensions.get('window');
@@ -21,13 +22,23 @@ import Pili, {
 } from 'react-native-pili';
 
 class pilipili extends Component {
+  constructor() {
+    super();
+    this.state = {
+      muted: false,
+      started: true
+    }
+  }
+
   render() {
     return (
-      <View style={styles.container}>
-        <Player
+        <View style={styles.container}>
+          <Player
+              started={this.state.started}
+              muted={this.state.muted}
               source={{
                           uri:"rtmp://live.hkstv.hk.lxdns.com/live/hks",
-                          //controller: true,
+                          backgroundPlay: true,
                           //timeout: 10 * 1000,
                           //live:true,
                           //hardCodec:false,
@@ -40,8 +51,27 @@ class pilipili extends Component {
                           //top:0
                         }}
               />
-      </View>
+          <TouchableHighlight onPress={this.start.bind(this)}>
+            <Text style={{height:100,width:100}}>{this.state.started ? "Stop" : "Start"}</Text>
+          </TouchableHighlight>
+
+          <TouchableHighlight onPress={this.mute.bind(this)}>
+            <Text style={{height:100,width:100}}>{this.state.muted ? "Sound" : "Mute"}</Text>
+          </TouchableHighlight>
+        </View>
     );
+  }
+
+  start(){
+    this.setState({
+      started:!this.state.started
+    });
+  }
+
+  mute(){
+    this.setState({
+      muted:!this.state.muted
+    });
   }
 }
 
