@@ -26,7 +26,8 @@ class pilipili extends Component {
     super();
     this.state = {
       muted: false,
-      started: true
+      started: true,
+      text: '...'
     }
   }
 
@@ -50,6 +51,11 @@ class pilipili extends Component {
                           //left:0,
                           //top:0
                         }}
+              onLoading={()=>this.setState({text: this.state.text + " loading"})}
+              onPaused={()=>this.setState({text: "pause"})}
+              onShutdown={()=>this.setState({text: "shutdown"})}
+              onError={()=>this.setState({text: "error"})}
+              onPlaying={()=>this.setState({text: this.state.text + " playing"})}
               />
           <TouchableHighlight onPress={this.start.bind(this)}>
             <Text style={{height:100,width:100}}>{this.state.started ? "Stop" : "Start"}</Text>
@@ -58,19 +64,25 @@ class pilipili extends Component {
           <TouchableHighlight onPress={this.mute.bind(this)}>
             <Text style={{height:100,width:100}}>{this.state.muted ? "Sound" : "Mute"}</Text>
           </TouchableHighlight>
+
+          <Text>{this.state.text}</Text>
         </View>
     );
   }
 
-  start(){
+  onState() {
+    this.setState({text: "loading"});
+  }
+
+  start() {
     this.setState({
-      started:!this.state.started
+      started: !this.state.started
     });
   }
 
-  mute(){
+  mute() {
     this.setState({
-      muted:!this.state.muted
+      muted: !this.state.muted
     });
   }
 }

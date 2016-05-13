@@ -15,7 +15,7 @@ import Pili, {
     Streaming,
     Player
 } from 'react-native-pili';
-
+//
 //<Streaming
 //    stream={this.state.stream}
 //    style={{
@@ -24,7 +24,21 @@ import Pili, {
 //                      }}
 //    zoom={this.state.zoom}
 //    focus={this.state.focus}
+//    profile={{
+//                video:{
+//                  fps:30,
+//                  bps:1000 * 1024,
+//                  maxFrameInterval:48
+//                },
+//                audio:{
+//                  rate:44100,
+//                  bitrate:96 * 1024
+//                },
+//              }}
+//    started={this.state.started}
+//    onReady={this.onReady.bind(this)}
 //    />
+
 
 //<Player
 //    source={{
@@ -34,10 +48,17 @@ import Pili, {
 //                live:true,
 //                hardCodec:false,
 //              }}
+//    started={this.state.started}
 //    style={{
 //                height:200,
 //                width:200,
 //              }}
+//    onLoading={()=>this.setState({text: "loading"})}
+//    onPaused={()=>this.setState({text: "pause"})}
+//    onShutdown={()=>this.setState({text: "shutdown"})}
+//    onError={()=>this.setState({text: "error"})}
+//    onPlaying={()=>this.setState({text: "playing"})}
+//
 //    />
 
 //var Demo = require('react-native-pili');
@@ -83,29 +104,26 @@ class pilipili extends Component {
 
     return (
         <View style={styles.container}>
-          <Streaming
-              stream={this.state.stream}
-              style={{
-                        height:200,
-                        width:200,
-                      }}
-              zoom={this.state.zoom}
-              focus={this.state.focus}
-              profile={{
-                video:{
-                  fps:30,
-                  bps:1000 * 1024,
-                  maxFrameInterval:48
-                },
-                audio:{
-                  rate:44100,
-                  bitrate:96 * 1024
-                },
+          <Player
+              source={{
+                uri:"rtmp://live.hkstv.hk.lxdns.com/live/hks",
+                //controller: true,
+                timeout: 10 * 1000,
+                live:true,
+                hardCodec:false,
               }}
               started={this.state.started}
-              onReady={this.onReady.bind(this)}
-              />
+              style={{
+                height:200,
+                width:200,
+              }}
+              onLoading={()=>this.setState({text: this.state.text + " loading"})}
+              onPaused={()=>this.setState({text: this.state.text + " pause"})}
+              onShutdown={()=>this.setState({text: this.state.text + " shutdown"})}
+              onError={()=>this.setState({text: this.state.text + " error"})}
+              onPlaying={()=>this.setState({text: this.state.text + " playing"})}
 
+              />
           <TouchableHighlight onPress={this._onPressButton.bind(this)}>
             <Text style={{height:100,width:100}}>Switch Stream</Text>
           </TouchableHighlight>
