@@ -33,11 +33,11 @@ class pilipili extends Component {
                           //hardCodec:false,
                         }}
               style={{
-                          height:width * 0.5,
-                          width:width,
-                          backgroundColor:'blue',
-                          left:0,
-                          top:0
+                          height:200,
+                          width:200,
+                          //backgroundColor:'blue',
+                          //left:0,
+                          //top:0
                         }}
               />
       </View>
@@ -48,9 +48,9 @@ class pilipili extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    //justifyContent: 'center',
-    //alignItems: 'center',
-    backgroundColor: 'red',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#F5FCFF',
   },
   welcome: {
     fontSize: 20,
