@@ -9,8 +9,11 @@ import React, {
   Component,
   StyleSheet,
   Text,
-  View
+  View,
+  Dimensions
 } from 'react-native';
+
+var {height, width} = Dimensions.get('window');
 
 import Pili, {
     Streaming,
@@ -30,8 +33,11 @@ class pilipili extends Component {
                           //hardCodec:false,
                         }}
               style={{
-                          height:300,
-                          width:1000,
+                          height:width * 0.5,
+                          width:width,
+                          backgroundColor:'blue',
+                          left:0,
+                          top:0
                         }}
               />
       </View>
@@ -42,9 +48,9 @@ class pilipili extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    //justifyContent: 'center',
+    //alignItems: 'center',
+    backgroundColor: 'red',
   },
   welcome: {
     fontSize: 20,
