@@ -8,8 +8,6 @@
   "dependencies": {
     "react": "^0.14.8",
     "react-native": "^0.24.1",
-    "react-native-pili": "./node_modules/react-native-pili",
-    "react-native-video": "git://github.com/buhe/react-native-video.git#d872933"
-
+    "react-native-pili": "./node_modules/react-native-pili"
   }
 }
