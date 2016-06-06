@@ -24,6 +24,7 @@
 		7864EB641CE488C50020FFF1 /* libRCTPili.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 781A25831CE4608E00C9FCF5 /* libRCTPili.a */; };
 		7864EB6C1CE489EC0020FFF1 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7864EB6B1CE489EC0020FFF1 /* libz.tbd */; };
 		7864EB6E1CE489F70020FFF1 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7864EB6D1CE489F70020FFF1 /* libc++.tbd */; };
+		78F50EB51D0540BD002B433C /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 78F50EB41D0540BD002B433C /* libresolv.tbd */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 /* End PBXBuildFile section */
 
@@ -138,6 +139,7 @@
 		7864EB6B1CE489EC0020FFF1 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		7864EB6D1CE489F70020FFF1 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
+		78F50EB41D0540BD002B433C /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -153,6 +155,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78F50EB51D0540BD002B433C /* libresolv.tbd in Frameworks */,
 				7864EB6E1CE489F70020FFF1 /* libc++.tbd in Frameworks */,
 				7864EB6C1CE489EC0020FFF1 /* libz.tbd in Frameworks */,
 				7864EB641CE488C50020FFF1 /* libRCTPili.a in Frameworks */,
@@ -270,6 +273,7 @@
 		70665083532B0A19F13F0720 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				78F50EB41D0540BD002B433C /* libresolv.tbd */,
 				7864EB6D1CE489F70020FFF1 /* libc++.tbd */,
 				7864EB6B1CE489EC0020FFF1 /* libz.tbd */,
 			);
