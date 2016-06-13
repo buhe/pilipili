@@ -112,8 +112,14 @@ class pilipili extends Component {
                             },
                           }}
                 started={this.state.started}
-                //onReady={this.onReady.bind(this)}
+                onReady={()=>this.setState({text: "onReady"})} //onReady event
+                onConnecting={()=>this.setState({text: "onConnecting"})} //onConnecting event
+                onStreaming={()=>this.setState({text: "onStreaming"})} //onStreaming event
+                onShutdown={()=>this.setState({text: "onShutdown"})} //onShutdown event
+                onIOError={()=>this.setState({text: "onIOError"})} //onIOError event
+                onDisconnected={()=>this.setState({text: "onDisconnected"})} //onDisconnected event
                 />
+          <Text>{this.state.text}</Text>
           <TouchableHighlight onPress={this.zoom1.bind(this)}>
             <Text style={{height:100,width:100}}>Zoom+</Text>
           </TouchableHighlight>
