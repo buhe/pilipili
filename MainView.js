@@ -13,7 +13,7 @@ export default class MainView extends Component {
   }
 
   render() {
-    return <StreamingView />
+    return <PlayView />
   }
 }
 
