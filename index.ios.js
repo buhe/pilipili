@@ -54,6 +54,8 @@ import Pili, {
 //
 //<Text>{this.state.text}</Text>
 
+var zoom = 1;
+
 const S1 = {
   id: "buhe",
   title: "buhe",
@@ -81,7 +83,9 @@ class pilipili extends Component {
       stream: S1,
       muted: false,
       started: true,
-      text: '...'
+      text: '...',
+      focus:true,
+      zoom: 1,
     }
   }
 
@@ -94,24 +98,45 @@ class pilipili extends Component {
                                     height:200,
                                     width:200,
                                   }}
-                //zoom={this.state.zoom}
-                //focus={this.state.focus}
-                //profile={{
-                //            video:{
-                //              fps:30,
-                //              bps:1000 * 1024,
-                //              maxFrameInterval:48
-                //            },
-                //            audio:{
-                //              rate:44100,
-                //              bitrate:96 * 1024
-                //            },
-                //          }}
-                //started={this.state.started}
+                zoom={this.state.zoom}
+                focus={this.state.focus}
+                profile={{
+                            video:{
+                              fps:30,
+                              bps:1000 * 1024,
+                              maxFrameInterval:48
+                            },
+                            audio:{
+                              rate:44100,
+                              bitrate:96 * 1024
+                            },
+                          }}
+                started={this.state.started}
                 //onReady={this.onReady.bind(this)}
                 />
+          <TouchableHighlight onPress={this.zoom1.bind(this)}>
+            <Text style={{height:100,width:100}}>Zoom+</Text>
+          </TouchableHighlight>
+          <TouchableHighlight onPress={this.zoom2.bind(this)}>
+            <Text style={{height:100,width:100}}>Zoom-</Text>
+          </TouchableHighlight>
         </View>
     );
+  }
+
+  zoom1() {
+    zoom = zoom + 1;
+    if (zoom < 0) {
+      zoom = 1;
+    }
+    this.setState({zoom: zoom});
+  }
+  zoom2() {
+    zoom = zoom - 1;
+    if (zoom < 0) {
+      zoom = 1;
+    }
+    this.setState({zoom: zoom});
   }
 
   onState() {
