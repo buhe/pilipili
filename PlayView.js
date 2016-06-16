@@ -33,7 +33,8 @@ export default class PlayView extends Component {
         <View style={styles.container}>
           <Player
               source={{
-                uri:"rtmp://pili-live-rtmp.pilitest.qiniucdn.com/pilitest/buhe",
+                uri:"rtmp://live.hkstv.hk.lxdns.com/live/hks",
+                //uri:"rtmp://pili-live-rtmp.pilitest.qiniucdn.com/pilitest/buhe",
                 //controller: true,
                 timeout: 10 * 1000,
                 live:true,
@@ -43,8 +44,9 @@ export default class PlayView extends Component {
               style={{
                 height:height,
                 width:width,
+                flex:1
               }}
-              //aspectRatio={1}
+              aspectRatio={2}
               onLoading={()=>this.setState({text: this.state.text + " loading"})}
               onPaused={()=>this.setState({text: this.state.text + " pause"})}
               onShutdown={()=>this.setState({text: this.state.text + " shutdown"})}
