@@ -13,7 +13,8 @@ import React, {
 } from 'react-native';
 import Pili, {
     Streaming,
-    Player
+    Player,
+    StreamingConst
 } from 'react-native-pili';
 
 var {height, width} = Dimensions.get('window');

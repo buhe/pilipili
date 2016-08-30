@@ -3,7 +3,7 @@ import React ,{
 } from 'react'
 
 import {Text,StyleSheet} from 'react-native'
-import PlayView from './PlayView.js';
+//import PlayView from './PlayView.js';
 import StreamingView from './StreamingView.js';
 
 export default class MainView extends Component {
@@ -13,7 +13,7 @@ export default class MainView extends Component {
   }
 
   render() {
-    return <PlayView />
+    return <StreamingView />
   }
 }
 

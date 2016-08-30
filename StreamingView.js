@@ -12,7 +12,8 @@ var {height, width} = Dimensions.get('window');
 
 import Pili, {
     Streaming,
-    Player
+    Player,
+    StreamingConst
 } from 'react-native-pili';
 
 //<Player
@@ -104,6 +105,7 @@ export default class StreamingView extends Component {
                               rate:44100,
                               bitrate:96 * 1024
                             },
+                            encodingSize:StreamingConst.encodingSize._480
                           }}
               started={this.state.started}
               onReady={()=>this.setState({text: "onReady"})} //onReady event
